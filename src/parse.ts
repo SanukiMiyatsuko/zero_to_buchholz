@@ -97,7 +97,7 @@ export class Scanner {
         } else {
             const argarr: T_S[] = [];
             let sub: T_S;
-            if (this.consume("a") || this.consume("亜")) {
+            if (this.consume("z") || this.consume("〇")) {
                 if (this.consume("(")) {
                     sub = this.parse_term();
                     if (this.consume(")")) return subs([sub]);
