@@ -216,7 +216,7 @@ export function trans(s: T_S): RT_B {
             for (let i = k_max; i > -1; i--) {
                 tarmList.push(ct(i, ec(trans(a[i]))));
             }
-            return psi("0", tarmList.reduce((accumulator, currentValue) => plus(accumulator, currentValue)));
+            return psi("0", standardisation(tarmList.reduce((accumulator, currentValue) => plus(accumulator, currentValue))));
         }
     }
 }
