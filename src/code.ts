@@ -210,12 +210,9 @@ export function trans(s: T_S): RT_B {
             k_max--;
         }
         if (k_max === -1) return ONE_B;
-        else if (k_max === 0) return psi("0", trans(a[0]));
         else {
             const tarmList = [];
-            for (let i = k_max; i > -1; i--) {
-                tarmList.push(ct(i, ec(trans(a[i]))));
-            }
+            for (let i = k_max; i > -1; i--) tarmList.push(ct(i, ec(trans(a[i]))));
             return psi("0", standardisation(tarmList.reduce((accumulator, currentValue) => plus(accumulator, currentValue))));
         }
     }
